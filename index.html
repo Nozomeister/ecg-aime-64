@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart ECG Report Generation with Tri-Modal AI</title>
+  <style>
+    :root {
+      --ntu-blue: rgb(24, 28, 98);
+      --ntu-red: rgb(215, 20, 64);
+      --ink: #172033;
+      --muted: #52616b;
+      --line: #d9e2ec;
+      --panel: #f7fafc;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--ink);
+      background: #f3f6fa;
+      line-height: 1.5;
+    }
+
+    .topbar {
+      height: 8px;
+      background: linear-gradient(90deg, var(--ntu-blue), var(--ntu-red));
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 36px 20px 48px;
+    }
+
+    header {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      color: var(--ntu-blue);
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 18px;
+      margin: 0 0 18px;
+    }
+
+    .authors {
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .affiliation {
+      color: var(--muted);
+      margin: 4px 0 0;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .card h2 {
+      color: var(--ntu-blue);
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+
+    .card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      color: var(--white);
+      background: var(--ntu-blue);
+      text-decoration: none;
+      font-weight: 700;
+      padding: 10px 13px;
+      border-radius: 6px;
+      margin: 4px 6px 4px 0;
+    }
+
+    .button.secondary {
+      color: var(--ntu-blue);
+      background: #eef2ff;
+    }
+
+    .button.accent {
+      background: var(--ntu-red);
+    }
+
+    .preview {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--panel);
+      margin-top: 8px;
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    @media (max-width: 780px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar"></div>
+  <main>
+    <header>
+      <h1>A Multimodal-based Framework for Smart ECG Report Generation</h1>
+      <p class="subtitle">Tri-modal ECG signal, Computer Vision, and LLM for automatic ECG report generation</p>
+      <p class="authors">Hong Duc Nguyen, Duc Tri Phan, Supraja S</p>
+      <p class="affiliation">School of Electrical and Electronic Engineering, Nanyang Technological University, Singapore</p>
+    </header>
+
+    <section class="grid">
+      <article class="card wide">
+        <h2>Quick Access</h2>
+        <p>Conference poster materials, paper, references, and contact information for the AIME short paper.</p>
+        <a class="button accent" href="assets/paper.pdf">Paper PDF</a>
+        <a class="button" href="assets/poster.pdf">Poster PDF</a>
+        <a class="button secondary" href="references.html">References</a>
+      </article>
+
+      <article class="card">
+        <h2>Key Idea</h2>
+        <p>We align raw ECG signals, visualized ECG images, and clinical text through a shared multimodal attention module.</p>
+        <ul>
+          <li>Raw 12-lead ECG signal encoder</li>
+          <li>Visual ECG image encoder</li>
+          <li>Clinical text embedding and LLM report generation</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2>Result Summary</h2>
+        <p>LLaVA-Next + Mistral-Nemo achieves the strongest overall natural language generation scores.</p>
+        <a class="button secondary" href="assets/aggregate_results.pdf">Aggregate result chart</a>
+      </article>
+
+      <article class="card">
+        <h2>Contact</h2>
+        <p>For questions, collaboration, or follow-up discussion:</p>
+        <p><strong>Dr. Hong Duc Nguyen</strong><br>
+        <a href="mailto:hongduc.nguyen@ntu.edu.sg">hongduc.nguyen@ntu.edu.sg</a></p>
+      </article>
+
+      <article class="card wide">
+        <h2>Framework Figure</h2>
+        <p>The proposed framework combines ECG signal, ECG image, and clinical text into a unified sequence for multimodal fusion and LLM-based report generation.</p>
+        <img class="preview" src="assets/framework.png" alt="Framework figure for tri-modal ECG report generation">
+      </article>
+    </section>
+
+    <footer>
+      QR landing page for AIME poster materials.
+    </footer>
+  </main>
+</body>
+</html>
