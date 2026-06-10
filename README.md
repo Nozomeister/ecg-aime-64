@@ -21,15 +21,3 @@ School of Electrical and Electronic Engineering, Nanyang Technological Universit
 ## Contact
 
 Hong Duc Nguyen: hongduc.nguyen@ntu.edu.sg
-
-## Suggested QR Content
-
-Use the GitHub Pages landing page rather than encoding many details directly in the QR. The page includes:
-
-- paper PDF
-- poster PDF
-- full references
-- BibTeX
-- author contact
-- framework figure and result chart
-
